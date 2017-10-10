@@ -10,7 +10,7 @@ def main():
     driver = webdriver.Firefox() # ou webdrive.Chrome(), por exemplo
     driver.get('http://www.imdb.com/chart/top')
 
-    # Manipulando os elementos
+    # Encontrando os elementos
     dado = driver.find_element_by_id('home_img')
     print(driver.title)
     print(dado)
@@ -40,6 +40,14 @@ def main():
         print('pagina não encontrada')
     else:
         print('weird...')
+    print()
+
+    # Clicando em botões
+    driver.get('https://produto.mercadolivre.com.br/MLB-857544873-maquina-de-sorvete-na-chapa-ice-cream-roll-sorvetec-_JM')
+    print(driver.title)
+    botao = driver.find_element_by_id('BidButtonTop')
+    botao.click()
+    time.sleep(5)
     print()
 
     # Fechando o driver
