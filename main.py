@@ -50,6 +50,13 @@ def main():
     time.sleep(5)
     print()
 
+    # Rolando a página
+    driver.get('http://www.globo.com/')
+    print(driver.title)
+    driver.execute_script('window.scrollTo(0, document.scrollHeight);')
+    time.sleep(5)
+    print()
+
     # Fechando o driver
     driver.close()
 
