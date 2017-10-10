@@ -5,3 +5,4 @@ bg:
 
 run:
 	python main.py
+	python hard.py
