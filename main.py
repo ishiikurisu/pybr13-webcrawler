@@ -51,11 +51,11 @@ def main():
     print()
 
     # Rolando a página
-    driver.get('http://www.globo.com/')
+    driver.get('http://www.pinterest.com/explore/python')
     print(driver.title)
-    driver.execute_script('window.scrollTo(0, document.scrollHeight);')
-    time.sleep(5)
+    driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
     print()
+    time.sleep(5)
 
     # Fechando o driver
     driver.close()
