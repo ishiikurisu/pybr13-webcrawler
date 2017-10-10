@@ -17,4 +17,8 @@ pip install selenium
 ```
 Assim, já teremos o servidor e um cliente para Python. Para baixar um driver, acesse a [página de downloads do Selenium][1].
 
+O código repassado está no script `main.py`. Aprendemos a manipular elementos; uma técnica para lidar com páginas  `404` não encontradas; e como clicar em botões.
+
+Foi comentado no curso que o _driver_ do Selenium tem uma propriedade `driver.status`, que permite checar o código de retorno da página.
+
 [1]: http://www.seleniumhq.org/download/

@@ -12,19 +12,35 @@ def main():
 
     # Manipulando os elementos
     dado = driver.find_element_by_id('home_img')
+    print(driver.title)
     print(dado)
 
     mais_dado = driver.find_element_by_css_selector('td.titleColumn a')
     link = mais_dado.get_attribute("href")
     print(link)
+    print()
 
     # Exemplo com _class_
     driver.get('https://produto.mercadolivre.com.br/MLB-750400411-gelateria-e-sorveteira-agratto-sorvetes-com-frutas-127v-_JM')
     nome = driver.find_element_by_class_name('item-title__primary ').text
+    print(driver.title)
     print(nome)
+    print()
     driver.get('https://produto.mercadolivre.com.br/MLB-793952232-maquina-de-sorvete-acai-e-frozen-yogurt-_JM')
     nome = driver.find_element_by_class_name('item-title__primary ').text
+    print(driver.title)
     print(nome)
+    print()
+
+    # Lidando com erro 404
+    driver.get('http://meu.ifmg.edu.br/corpore.nasdfasdf')
+    titulo = driver.title
+    print(titulo)
+    if titulo.find('404') != -1:
+        print('pagina não encontrada')
+    else:
+        print('weird...')
+    print()
 
     # Fechando o driver
     driver.close()
