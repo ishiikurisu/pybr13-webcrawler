@@ -18,6 +18,14 @@ def main():
     link = mais_dado.get_attribute("href")
     print(link)
 
+    # Exemplo com _class_
+    driver.get('https://produto.mercadolivre.com.br/MLB-750400411-gelateria-e-sorveteira-agratto-sorvetes-com-frutas-127v-_JM')
+    nome = driver.find_element_by_class_name('item-title__primary ').text
+    print(nome)
+    driver.get('https://produto.mercadolivre.com.br/MLB-793952232-maquina-de-sorvete-acai-e-frozen-yogurt-_JM')
+    nome = driver.find_element_by_class_name('item-title__primary ').text
+    print(nome)
+
     # Fechando o driver
     driver.close()
 
